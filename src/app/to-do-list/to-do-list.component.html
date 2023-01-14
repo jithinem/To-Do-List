@@ -1,0 +1,80 @@
+<div class="container-fluid bg-dark">
+    <div class="row row-1">
+        <div class="col-3"></div>
+        <div class="col-6 bg-primary text-center">
+            <h2>To Do List</h2><br><br><br>
+            <div class="row row-2">
+                <div class="col-7">
+                    <input [(ngModel)]="message" class="form-control"  name="message" type="text" placeholder="Enter your task/message here">
+
+                </div>
+                <div class="col-3">
+                    <input type="date" [(ngModel)]="date" name="date" placeholder="Date">
+                </div>
+                <div class="col-2">
+                    <input type="time" [(ngModel)]="time" name="time" placeholder="time">
+                </div>
+                <div class="Save d-grid gap-2 col-6 mx-auto my-4 "><button class="btn btn-secondary" (click)="submit()">Save</button></div>
+            </div><br><br>
+            <div class="saved text-start " style="text-decoration: underline;"><h6>Saved details</h6></div>
+            <table>
+                <tr *ngI="let t of times">
+                    <td>{{t.message}}&nbsp;{{t.date}}&nbsp;{{t.time}}</td>
+                </tr>
+            </table>
+            <!-- <div class="row row-3" *ngFor="let t of times">
+                <div class="col-1"></div>
+                <div class="col-7 bg-light border rounded-2" style="height: 50px;">{{t.message}}&nbsp;<div style="text-align: end;">{{t.date}}&nbsp;{{t.time}}</div></div>
+                <div class="col-1"></div>
+                <div class="col-2"><button class="bg-danger rounded-2">Done/Delete</button></div>
+                <div class="col-1"></div>
+            </div><br> -->
+            <!-- <div class="row row-3">
+                <div class="col-1"></div>
+                <div class="col-7 bg-light border rounded-2" style="height: 40px;">ttt</div>
+                <div class="col-1"></div>
+                <div class="col-2"><button class="bg-danger rounded-2">Done/Delete</button></div>
+                <div class="col-1"></div>
+            </div><br>
+            <div class="row row-3">
+                <div class="col-1"></div>
+                <div class="col-7 bg-light border rounded-2" style="height: 40px;">ttt</div>
+                <div class="col-1"></div>
+                <div class="col-2"><button class="bg-danger rounded-2">Done/Delete</button></div>
+                <div class="col-1"></div>
+            </div><br>
+            <div class="row row-3">
+                <div class="col-1"></div>
+                <div class="col-7 bg-light border rounded-2" style="height: 40px;">ttt</div>
+                <div class="col-1"></div>
+                <div class="col-2"><button class="bg-danger rounded-2">Done/Delete</button></div>
+                <div class="col-1"></div>
+            </div><br>
+            <div class="row row-3">
+                <div class="col-1"></div>
+                <div class="col-7 bg-light border rounded-2" style="height: 40px;">ttt</div>
+                <div class="col-1"></div>
+                <div class="col-2"><button class="bg-danger rounded-2">Done/Delete</button></div>
+                <div class="col-1"></div>
+            </div><br>
+            <div class="row row-3">
+                <div class="col-1"></div>
+                <div class="col-7 bg-light border rounded-2" style="height: 40px;">ttt</div>
+                <div class="col-1"></div>
+                <div class="col-2"><button class="bg-danger rounded-2">Done/Delete</button></div>
+                <div class="col-1"></div>
+            </div><br>
+            <div class="row row-3">
+                <div class="col-1"></div>
+                <div class="col-7 bg-light border rounded-2" style="height: 40px;">ttt</div>
+                <div class="col-1"></div>
+                <div class="col-2"><button class="bg-danger rounded-2">Done/Delete</button></div>
+                <div class="col-1"></div>
+            </div><br> -->
+
+
+
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
