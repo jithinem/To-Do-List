@@ -6,13 +6,13 @@ import { Injectable } from '@angular/core';
 export class DataService {
 
   constructor() { }
-  saveDetails:any={message:"a",date:"a",time:"a"};
-  display(message:any,date:any,time:any){
-    this.saveDetails={
-      message:message,
-      date:date,
-      time:time
-    }
+  saveDetails:any=[];
+  display(message:any){
+    this.saveDetails.push(
+      {
+        message:message,
+      }
+    )
     return this.saveDetails;
   }
 }

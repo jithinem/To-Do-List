@@ -8,20 +8,24 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./to-do-list.component.css']
 })
 export class ToDoListComponent implements OnInit {
-  constructor(private router:Router, private ds:DataService){}
+  constructor(private router:Router, private ds:DataService){
+    this.sDate=Date();
+  }
   ngOnInit(): void{
 
   }
   message:any;
-  date:any;
-  time:any;
   times:any;
+  sDate:any;
+  t:any;
+  del:any;
 
   submit(){
     // alert('submit')
     var message=this.message;
-    var date=this.date;
-    var time=this.time;
-    this.times=this.ds.display(message,date,time);
+    this.times=this.ds.display(message);
+  }
+  delete(del:any){
+    this.times.splice(del,1)
   }
 }

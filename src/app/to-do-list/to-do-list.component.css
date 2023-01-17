@@ -1,0 +1,36 @@
+.data{
+    background-color: yellow;
+    border: 3px solid black;
+    width: 700px;
+    text-align: start;
+    font-weight: bolder;
+}
+.done{
+    background-color: rgb(89, 186, 238);
+    margin-left: 20px;
+    border: 3px solid black;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.done:hover{
+    background-color: bisque;
+    box-shadow: 2px 2px 2px;
+}
+.body{
+    background-image: url("../../assets/pngwing.com.png");
+    background-color: bisque; 
+}
+.save{
+    background-color: rgb(230, 153, 59);
+    border-radius: 8px;
+}
+.save:hover{
+    box-shadow: 5px 5px 5px;
+    background-color: silver;
+}
+.saveHead{
+    border: 2px black ridge;
+    width: 100px;
+    background-color: goldenrod;
+  
+}

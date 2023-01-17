@@ -1,26 +1,22 @@
-<div class="container-fluid bg-dark">
-    <div class="row row-1">
+<div class=" body" style="height:100vh;">
+    <div class="row row-1 ">
         <div class="col-3"></div>
-        <div class="col-6 bg-primary text-center">
-            <h2>To Do List</h2><br><br><br>
+        <div style="background-color: rgb(14, 24, 217); border-radius: 5px; border: 3px black solid;" class=" col-6 text-center mt-3">
+            <h1>To Do List App</h1><br><br><br>
             <div class="row row-2">
-                <div class="col-7">
+                <div class="col-12">
                     <input [(ngModel)]="message" class="form-control"  name="message" type="text" placeholder="Enter your task/message here">
-
                 </div>
-                <div class="col-3">
-                    <input type="date" [(ngModel)]="date" name="date" placeholder="Date">
-                </div>
-                <div class="col-2">
-                    <input type="time" [(ngModel)]="time" name="time" placeholder="time">
-                </div>
-                <div class="Save d-grid gap-2 col-6 mx-auto my-4 "><button class="btn btn-secondary" (click)="submit()">Save</button></div>
-            </div><br><br>
-            <div class="saved text-start " style="text-decoration: underline;"><h6>Saved details</h6></div>
-            <table>
-                <tr *ngI="let t of times">
-                    <td>{{t.message}}&nbsp;{{t.date}}&nbsp;{{t.time}}</td>
-                </tr>
+                <div class="Save d-grid gap-2 col-6 mx-auto mt-4 "><button class="save" (click)="submit()">Save</button></div>
+            </div><br>
+            <div class="text-start " ><h6 class="saveHead">Saved details</h6></div>
+            <table class="mb-2">
+                <tbody>
+                    <tr *ngFor="let t of times; let del=index">
+                        <td class="data">{{t.message}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div style="text-align: end;">{{sDate|date:'dd/MM/yy h:mm a'}}</div></td><button class="done"(click)="delete(del)">delete/done</button>
+                    </tr>
+    
+                </tbody>
             </table>
             <!-- <div class="row row-3" *ngFor="let t of times">
                 <div class="col-1"></div>
